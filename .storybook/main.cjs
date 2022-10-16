@@ -12,4 +12,11 @@ module.exports = {
   features: {
     storyStoreV7: true,
   },
+  async viteFinal(config, { configType }) {
+    if (configType === "PRODUCTION") {
+      config.base = "/react-start-design-system/";
+    }
+
+    return config;
+  },
 };
