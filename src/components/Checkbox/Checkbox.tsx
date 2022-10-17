@@ -14,6 +14,7 @@ export namespace CheckboxProps {
   export interface Label {
     children: string;
     size?: "sm" | "md" | "lg";
+    className?: string;
   }
 }
 
@@ -23,8 +24,16 @@ function CheckboxRoot(props: CheckboxProps.Root) {
 
 CheckboxRoot.displayName = "Checkbox.Root";
 
-function CheckboxLabel({ children, size = "sm" }: CheckboxProps.Label) {
-  return <Text size={size}>{children}</Text>;
+function CheckboxLabel({
+  children,
+  size = "sm",
+  className = "",
+}: CheckboxProps.Label) {
+  return (
+    <Text size={size} className={className}>
+      {children}
+    </Text>
+  );
 }
 
 CheckboxLabel.displayName = "Checkbox.Label";

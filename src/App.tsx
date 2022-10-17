@@ -1,5 +1,6 @@
 import "./styles/global.css";
+import { SignIn } from "./pages/sign-in";
 
 export function App() {
-  return <h1 className="font-bold text-lg text-violet-500">Hello World</h1>;
+  return <SignIn />;
 }
